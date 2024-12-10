@@ -1,0 +1,123 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/9602.jpg');
+}
+#btnMenu{
+    border: 2px solid black; 
+    width: 150px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 40px;
+    font-weight: bold;  
+    background: linear-gradient(to bottom right,#93C6D6,white);
+    /* background-color: transparent ; */
+}
+.btnNewCard{
+    border: 2px solid black; 
+    width: 150px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 40px;
+    font-weight: bold;  
+    background: linear-gradient(to bottom right,#93C6D6,white);
+    margin-top: 10px;
+    /* background-color: transparent ; */
+}
+#btnMenu:hover{
+    cursor:pointer;
+    font-style: italic;
+    /* font-size: 15px; */
+    background: linear-gradient(to bottom right,#93C6D6,white);;
+        backface-visibility: 90%;
+}
+.btnNewCard:hover{
+    cursor:pointer;
+    font-style: italic;
+    /* font-size: 15px; */
+    background: linear-gradient(to bottom right, #A7ACD9,white);
+    /* background: linear-gradient(to bottom right,#93C6D6,white); */
+    backface-visibility: 90%;
+}
+.flashCardContainer {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    perspective: 1000px;
+    margin-top: 80px;
+}
+
+.cardContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.flashCardContainer:hover
+.cardContainer {
+    transform: rotateY(-180deg);
+}
+
+
+
+.cardFrontSide, .cardBackSide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: linear-gradient(to bottom right, #A7ACD9,white);
+    border: 2px solid #505050;
+    border-radius: 40px;
+    padding: 20px ;
+}
+
+.cardBackSide {
+    background: linear-gradient(to bottom right,#93C6D6,white);
+    color: black;
+    transform: rotateY(180deg);
+}
+#main
+{
+    /* border: 1px solid black; */
+    /* background-color: gray; */
+    height: 100%px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
+
+}
+#navBarMenu
+{
+    width: 100%;
+    background-color: #93C6D6;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-top: 10px;
+}
+a, a:visited, .newCard{
+    /* border: 1px solid black; */
+    /* border-radius: 40px; */
+    color: yellow;
+    padding: 10px;
+    margin: 10px;
+}
+a:hover , .newCard:hover
+{
+    background-color: darkblue;
+    color: white;
+}
